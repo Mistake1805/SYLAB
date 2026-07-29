@@ -1,0 +1,65 @@
+services:
+
+  # ─────────────────────────────────────────
+  # PostgreSQL Database
+  # ─────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: sylab-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: sylab_db
+      POSTGRES_USER: sylab_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - sylab-net
+    # NOT exposed to host — only internal access for security
+
+  # ─────────────────────────────────────────
+  # Spring Boot Core Services
+  # ─────────────────────────────────────────
+  coreservices:
+    build: ./coreservices
+    container_name: sylab-core
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sylab_db
+      SPRING_DATASOURCE_USERNAME: sylab_user
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      APP_JWT_SECRET: ${JWT_SECRET}
+      APP_JWT_EXPIRATION_MS: 86400000
+      APP_JWT_REMEMBER_ME_EXPIRATION_MS: 2592000000
+      APP_JWT_COOKIE_NAME: sylab_jwt
+      APP_SYNC_INTERNAL_SECRET: ${INTERNAL_SYNC_SECRET}
+    networks:
+      - sylab-net
+    # NOT exposed to host — only gateway can reach it
+
+  # ─────────────────────────────────────────
+  # FastAPI Gateway (public-facing)
+  # ─────────────────────────────────────────
+  gateway:
+    build: ./gateway
+    container_name: sylab-gateway
+    restart: always
+    depends_on:
+      - coreservices
+    environment:
+      CORESERVICES_BASE_URL: http://coreservices:8081
+      INTERNAL_SYNC_SECRET: ${INTERNAL_SYNC_SECRET}
+      DEBUG: "false"
+    ports:
+      - "8000:8000"   # Exposed to the internet
+    networks:
+      - sylab-net
+
+networks:
+  sylab-net:
+    driver: bridge
+
+volumes:
+  pgdata:
