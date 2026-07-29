@@ -1,14 +1,51 @@
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\controllers\HealthController.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\dtos\SemesterRequestDTO.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\exceptions\GlobalExceptionHandler.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Module.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Semester.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Subject.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Topic.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\ModuleRepository.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\SemesterRepository.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\SubjectRepository.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\TopicRepository.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\services\DataSeeder.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\services\SemesterService.java
-D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\SyllabusApplication.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\AuthController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\BadgeController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\CompareController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\FriendController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\HealthController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\LeaderboardController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\SyncController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\controllers\UserController.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\AuthResponse.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\BadgeDTO.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\ForgotPasswordRequest.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\FriendDTO.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\LeaderboardEntryResponse.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\LinkLeetCodeRequest.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\LoginRequest.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\RegisterRequest.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\ResetPasswordRequest.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\UpdateProfileRequest.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\UserCompareResponse.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\UserProfileResponse.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\UserSolveHistoryDTO.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\dtos\UserStatsResponse.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\exceptions\GlobalExceptionHandler.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\Badge.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\Friendship.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\FriendshipStatus.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\PasswordResetToken.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\User.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\UserBadge.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\UserRole.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\models\UserSolveHistory.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\repositories\BadgeRepository.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\repositories\FriendshipRepository.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\repositories\PasswordResetTokenRepository.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\repositories\UserBadgeRepository.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\repositories\UserRepository.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\repositories\UserSolveHistoryRepository.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\security\JwtAuthFilter.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\security\JwtUtils.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\security\SecurityConfig.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\security\UserDetailsImpl.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\security\UserDetailsServiceImpl.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\AuthService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\BadgeService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\CompareService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\FriendService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\LeaderboardService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\LeetCodeService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\SyncService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\services\UserService.java
+D:\SYLAB\SYLAB_Backend\coreservices\src\main\java\com\example\syllabus\SyllabusApplication.java
