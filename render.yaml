@@ -6,8 +6,9 @@ databases:
 
 services:
   # 1. Spring Boot Core Services
-  - type: pserv
+  - type: web
     name: sylab-core
+    plan: free
     env: docker
     rootDir: SYLAB_Backend
     dockerContext: ./coreservices
@@ -39,6 +40,7 @@ services:
   # 2. FastAPI Gateway
   - type: web
     name: sylab-gateway
+    plan: free
     env: docker
     rootDir: SYLAB_Backend
     dockerContext: ./gateway
@@ -48,7 +50,7 @@ services:
         value: http://sylab-core:8081 # Internal network call to Core Services
       - key: INTERNAL_SYNC_SECRET
         fromService:
-          type: pserv
+          type: web
           name: sylab-core
           envVarKey: APP_SYNC_INTERNAL_SECRET
       - key: DEBUG
