@@ -51,7 +51,7 @@ public class AuthService {
         User user = new User(
                 request.getUsername(),
                 request.getEmail(),
-                passwordEncoder.encode(request.getPassword())
+                request.getPassword()
         );
         user.setRole(UserRole.ROLE_USER);
 
@@ -126,7 +126,7 @@ public class AuthService {
         }
 
         User user = resetToken.getUser();
-        user.setPasswordHash(passwordEncoder.encode(request.getNewPassword()));
+        user.setPassword(request.getNewPassword());
         userRepository.save(user);
 
         tokenRepository.delete(resetToken);

@@ -56,8 +56,31 @@ public class UserService {
         if (request.getBio() != null) {
             user.setBio(request.getBio());
         }
-        User updated = userRepository.save(user);
-        return getPublicProfile(updated.getId());
+        
+        // If the request contains a LeetCode username, process the sync logic
+        if (request.getLeetCodeUsername() != null && !request.getLeetCodeUsername().isBlank()) {
+            String lcUsername = request.getLeetCodeUsername().trim();
+            LeetCodeService.LeetCodeStats stats = leetCodeService.fetchLeetCodeStats(lcUsername);
+            if (!stats.isValid()) {
+                throw new IllegalArgumentException("LeetCode username '" + lcUsername + "' does not exist or could not be verified");
+            }
+            user.setLeetCodeUsername(stats.getUsername());
+            user.setEasySolved(stats.getEasySolved());
+            user.setMediumSolved(stats.getMediumSolved());
+            user.setHardSolved(stats.getHardSolved());
+            user.setTotalSolved(stats.getTotalSolved());
+
+            int xp = (stats.getEasySolved() * 10) + (stats.getMediumSolved() * 20) + (stats.getHardSolved() * 30);
+            user.setXp(xp);
+            
+            // Save and award badges instantly
+            userRepository.save(user);
+            badgeService.evaluateAndAwardBadges(user);
+        } else {
+            userRepository.save(user);
+        }
+        
+        return getPublicProfile(user.getId());
     }
 
     @Transactional
