@@ -17,9 +17,9 @@ WORKDIR /app
 # Copy built JAR from build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# JVM tuning for low-memory (2GB) environment
-ENV JAVA_OPTS="-Xms128m -Xmx512m -XX:+UseContainerSupport -XX:MaxRAMPercentage=50.0"
+# JVM tuning for Render Free Tier (512MB)
+ENV JAVA_OPTS="-XX:+UseContainerSupport -XX:MaxRAMPercentage=60.0"
 
 EXPOSE 8081
-
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+# Override lingering environment variables from old blueprints to guarantee correct JDBC format
+ENTRYPOINT ["sh", "-c", "export SPRING_DATASOURCE_URL=\"jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}\" && java $JAVA_OPTS -jar app.jar"]
