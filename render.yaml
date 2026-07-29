@@ -14,10 +14,18 @@ services:
     dockerContext: ./coreservices
     dockerfilePath: ./coreservices/Dockerfile
     envVars:
-      - key: SPRING_DATASOURCE_URL
+      - key: DB_HOST
         fromDatabase:
           name: sylab-postgres
-          property: connectionString
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: sylab-postgres
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: sylab-postgres
+          property: database
       - key: SPRING_DATASOURCE_USERNAME
         fromDatabase:
           name: sylab-postgres
