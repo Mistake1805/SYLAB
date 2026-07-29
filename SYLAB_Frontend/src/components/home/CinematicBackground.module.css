@@ -1,0 +1,27 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Layered scrim: keeps text legible over arbitrary frame imagery while
+   leaving the animation clearly visible. Multi-stop so the middle is lighter. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9, 9, 14, 0.78) 0%,
+      rgba(9, 9, 14, 0.38) 30%,
+      rgba(9, 9, 14, 0.38) 70%,
+      rgba(9, 9, 14, 0.82) 100%
+    );
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}

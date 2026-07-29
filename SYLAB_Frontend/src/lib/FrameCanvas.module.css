@@ -1,0 +1,10 @@
+.canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  display: block;
+  background-color: var(--bg); /* prevents any flash before first frame */
+  pointer-events: none;
+}

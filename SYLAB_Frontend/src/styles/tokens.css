@@ -1,0 +1,119 @@
+/* =========================================================================
+   SYLAB design tokens — two coordinated palettes.
+
+   - "Apple mono":  near-black background + white text. Used by the cinematic
+                    Home experience so the frame animation is the star.
+   - "Pulse":       coral / violet accents on the same dark base. Used by the
+                    Login gate and the gamified Dashboard.
+
+   All sizes/spacing/radius/motion/elevation live here as CSS variables so the
+   rest of the codebase never hardcodes magic numbers.
+   ========================================================================= */
+
+:root {
+  /* --- Base surface (shared) --- */
+  --bg: #09090e;            /* deepest background */
+  --bg-elevated: #101018;   /* raised surface */
+  --bg-surface: #14141f;    /* card surface */
+  --bg-glass: rgba(20, 20, 31, 0.55); /* glassmorphism fill */
+  --bg-glass-strong: rgba(20, 20, 31, 0.78);
+
+  /* --- Apple-monochrome (Home cinematic) --- */
+  --mono-text: #f5f5f7;            /* primary white text */
+  --mono-text-soft: rgba(245, 245, 247, 0.72);
+  --mono-text-muted: rgba(245, 245, 247, 0.5);
+  --mono-divider: rgba(255, 255, 255, 0.08);
+  --mono-glass: rgba(255, 255, 255, 0.04);
+  --mono-glass-border: rgba(255, 255, 255, 0.12);
+
+  /* --- Pulse accents (Login / Dashboard) --- */
+  --primary: #ff6a55;            /* coral */
+  --primary-strong: #ff4d36;
+  --primary-soft: rgba(255, 106, 85, 0.16);
+  --accent: #8b5cf6;            /* violet */
+  --accent-strong: #7c3aed;
+  --accent-soft: rgba(139, 92, 246, 0.18);
+  --tertiary: #f43f5e;          /* rose */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --info: #38bdf8;
+
+  /* --- Text (Pulse contexts) --- */
+  --text: #f4f1ea;
+  --text-soft: rgba(244, 241, 234, 0.72);
+  --text-muted: rgba(244, 241, 234, 0.46);
+  --text-dim: rgba(244, 241, 234, 0.3);
+
+  /* --- Ranking tier colors --- */
+  --tier-bronze: #c9805b;
+  --tier-silver: #c0c7d4;
+  --tier-gold: #f5c451;
+  --tier-platinum: #7fdfe6;
+  --tier-diamond: #6fb6ff;
+  --tier-master: #b07cff;
+  --tier-grandmaster: #ff5d8f;
+  --tier-legend: #ff8a3d;
+
+  /* --- Typography --- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  --fs-display: clamp(2.75rem, 7vw, 6rem);
+  --fs-h1: clamp(2rem, 4.5vw, 3.5rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --fs-h3: clamp(1.15rem, 1.8vw, 1.5rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-label: 0.75rem;
+
+  --lh-tight: 1.05;
+  --lh-snug: 1.2;
+  --lh-normal: 1.5;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.18em;
+
+  /* --- Spacing (4px rhythm) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* --- Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 13px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* --- Motion (Apple-like, moderate) --- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --duration-slow: 380ms;
+  --duration-slower: 600ms;
+
+  /* --- Elevation --- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow-primary: 0 0 40px rgba(255, 106, 85, 0.35);
+  --shadow-glow-accent: 0 0 40px rgba(139, 92, 246, 0.35);
+
+  /* --- Layout --- */
+  --maxw: 1200px;
+  --nav-h: 64px;
+}

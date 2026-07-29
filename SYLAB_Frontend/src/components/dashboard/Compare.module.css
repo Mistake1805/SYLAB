@@ -1,0 +1,82 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-8);
+}
+
+.metricBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.metricLabel {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.peerRow {
+  display: grid;
+  grid-template-columns: 96px 1fr 56px;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.peerName {
+  font-size: var(--fs-small);
+  color: var(--text-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.peerYou {
+  color: var(--primary);
+  font-weight: 700;
+}
+.peerAvg {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.peerBarTrack {
+  position: relative;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+.peerBar {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: rgba(139, 92, 246, 0.5);
+  transform-origin: left center;
+}
+.peerBarYou {
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.peerVal {
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--text);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .peerRow {
+    grid-template-columns: 80px 1fr 48px;
+  }
+}

@@ -1,0 +1,107 @@
+.sectionLabel {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.booster {
+  position: relative;
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.boosterActive {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: linear-gradient(160deg, rgba(34, 197, 94, 0.1), rgba(255, 255, 255, 0.02));
+}
+.boosterActive::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--success);
+  box-shadow: 0 0 10px var(--success);
+  animation: pulse-glow 2s var(--ease-standard) infinite;
+}
+
+.boosterLocked {
+  opacity: 0.85;
+}
+
+.boosterHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boosterIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.boosterName {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.boosterDesc {
+  font-size: var(--fs-small);
+  color: var(--text-muted);
+  line-height: var(--lh-normal);
+  flex: 1;
+}
+
+.timerBar {
+  position: relative;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.timerFill {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--success), var(--info));
+  transform-origin: left center;
+}
+
+.activateBtn {
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  color: var(--primary);
+  background: var(--primary-soft);
+  transition: background-color var(--duration-base) var(--ease-standard);
+}
+.activateBtn:hover {
+  background: rgba(255, 106, 85, 0.28);
+}

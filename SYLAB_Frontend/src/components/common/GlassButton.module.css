@@ -1,0 +1,81 @@
+.btn {
+  --btn-bg: rgba(255, 255, 255, 0.06);
+  --btn-fg: var(--mono-text);
+  --btn-border: rgba(255, 255, 255, 0.16);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  white-space: nowrap;
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  transition:
+    transform var(--duration-base) var(--ease-standard),
+    background-color var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard),
+    box-shadow var(--duration-base) var(--ease-standard);
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+/* Variants */
+.primary {
+  --btn-bg: #f5f5f7;
+  --btn-fg: #09090e;
+  --btn-border: rgba(255, 255, 255, 0.6);
+}
+.primary:hover {
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.18);
+}
+
+.pulse {
+  --btn-bg: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  --btn-fg: #fff;
+  --btn-border: transparent;
+  background-image: var(--btn-bg);
+}
+.pulse:hover {
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.ghost {
+  --btn-bg: rgba(255, 255, 255, 0.06);
+  --btn-fg: var(--mono-text);
+}
+.ghost:hover {
+  --btn-bg: rgba(255, 255, 255, 0.12);
+}
+
+/* Sizes */
+.sm {
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-label);
+}
+.md {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--fs-small);
+}
+.lg {
+  padding: 1rem 2.25rem;
+  font-size: var(--fs-body);
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
