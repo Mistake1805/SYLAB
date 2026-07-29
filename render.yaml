@@ -14,6 +14,8 @@ services:
     dockerContext: ./coreservices
     dockerfilePath: ./coreservices/Dockerfile
     envVars:
+      - key: PORT
+        value: "8081"
       - key: DB_HOST
         fromDatabase:
           name: sylab-postgres
