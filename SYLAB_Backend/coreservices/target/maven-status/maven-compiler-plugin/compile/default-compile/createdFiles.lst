@@ -1,0 +1,14 @@
+com\example\syllabus\repositories\SemesterRepository.class
+com\example\syllabus\models\Topic.class
+com\example\syllabus\repositories\ModuleRepository.class
+com\example\syllabus\dtos\SemesterRequestDTO.class
+com\example\syllabus\repositories\SubjectRepository.class
+com\example\syllabus\controllers\HealthController.class
+com\example\syllabus\services\SemesterService.class
+com\example\syllabus\models\Module.class
+com\example\syllabus\exceptions\GlobalExceptionHandler.class
+com\example\syllabus\SyllabusApplication.class
+com\example\syllabus\models\Subject.class
+com\example\syllabus\services\DataSeeder.class
+com\example\syllabus\models\Semester.class
+com\example\syllabus\repositories\TopicRepository.class

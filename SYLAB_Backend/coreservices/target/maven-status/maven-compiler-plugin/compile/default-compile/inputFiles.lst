@@ -1,0 +1,14 @@
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\controllers\HealthController.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\dtos\SemesterRequestDTO.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\exceptions\GlobalExceptionHandler.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Module.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Semester.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Subject.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\models\Topic.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\ModuleRepository.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\SemesterRepository.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\SubjectRepository.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\repositories\TopicRepository.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\services\DataSeeder.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\services\SemesterService.java
+D:\Heavy Project\Backend\coreservices\src\main\java\com\example\syllabus\SyllabusApplication.java
